@@ -34,3 +34,15 @@ def dataAddTodo(details : str) :
     # return the new todo object
     return new_todo
 
+
+# delete todo by id
+def dataDeleteTodo(id : int) :
+    result : bool = True
+    try:
+        del todos_list[id - 1]
+        print('deleted item with index: ' + str(id-1))
+    except:
+        print('error deleting item with index: ' + str(id-1))
+        result = False
+
+    return result
